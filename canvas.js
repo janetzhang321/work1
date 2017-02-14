@@ -8,9 +8,9 @@ button.addEventListener("click", function(e){
 });
 
 var drawRect = function(e){
-	console.log('click!')
-	var x = event.offsetX;     // Get the horizontal coordinate
-	var y = event.offsetY;     // Get the vertical coordinate
+	console.log('click!');
+	var x = e.offsetX;     // Get the horizontal coordinate
+	var y = e.offsetY;     // Get the vertical coordinate
 	var ctx = c.getContext('2d');
 	ctx.fillStyle = "#ff0000";
 	ctx.fillRect(x,y,100,200);
@@ -18,15 +18,15 @@ var drawRect = function(e){
 };
 
 var drawDot = function(e){
-	console.log('click!')
-	var x = event.offsetX;     // Get the horizontal coordinate
-	var y = event.offsetY;     // Get the vertical coordinate
+	console.log('click!');
+	var x = e.offsetX;     // Get the horizontal coordinate
+	var y = e.offsetY;     // Get the vertical coordinate
 	var ctx = c.getContext('2d');
 	ctx.fillStyle = "#ff0000";
 	ctx.beginPath();
 	ctx.moveTo(x,y);
 	ctx.arc(x,y,20,0,2*Math.PI);
-});
+};
 
 
-c.addEventListener("click", drawDot(e));
+c.addEventListener("click", drawRect);
